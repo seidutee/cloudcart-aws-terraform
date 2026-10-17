@@ -48,3 +48,33 @@ variable "enable_nat_gateway" {
   type        = bool
   default     = false
 }
+
+variable "alb_ingress_cidrs" {
+  description = "Approved HTTPS source CIDRs for the ALB"
+  type        = list(string)
+  default     = []
+}
+
+variable "app_port" {
+  description = "CloudCart application port"
+  type        = number
+  default     = 8080
+}
+
+variable "database_port" {
+  description = "CloudCart PostgreSQL port"
+  type        = number
+  default     = 5432
+}
+
+variable "image_tag_mutability" {
+  description = "ECR image tag mutability"
+  type        = string
+  default     = "IMMUTABLE"
+}
+
+variable "image_retention_count" {
+  description = "Number of tagged ECR images to retain"
+  type        = number
+  default     = 10
+}
