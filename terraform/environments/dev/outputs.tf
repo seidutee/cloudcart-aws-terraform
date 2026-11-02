@@ -29,3 +29,47 @@ output "ecr_repository_url" {
   description = "CloudCart container registry URL"
   value       = module.ecr.repository_url
 }
+
+output "ecs_iam_role_arns" {
+  description = "IAM role ARNs for CloudCart ECS tasks"
+
+  value = {
+    execution = module.iam.ecs_task_execution_role_arn
+    task      = module.iam.ecs_task_role_arn
+  }
+}
+
+output "ecs_cluster_name" {
+  description = "CloudCart ECS cluster name"
+  value       = module.ecs.cluster_name
+}
+
+output "ecs_task_definition_arn" {
+  description = "CloudCart ECS task definition ARN"
+  value       = module.ecs.task_definition_arn
+}
+
+output "rds_endpoint" {
+  description = "Private PostgreSQL endpoint"
+  value       = module.rds.db_endpoint
+}
+
+output "rds_master_secret_arn" {
+  description = "Secrets Manager ARN for PostgreSQL credentials"
+  value       = module.rds.master_secret_arn
+}
+
+
+output "alb_dns_name" {
+  description = "Public DNS name of the CloudCart ALB"
+  value       = module.alb.alb_dns_name
+}
+
+
+# output "db_init_repository_url" {
+#   value = module.ecs.db_init_repository_url
+# }
+
+output "db_init_task_definition_arn" {
+  value = module.ecs.db_init_task_definition_arn
+}

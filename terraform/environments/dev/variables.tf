@@ -78,3 +78,17 @@ variable "image_retention_count" {
   type        = number
   default     = 10
 }
+
+variable "image_tag" {
+  description = "CloudCart Docker image tag"
+  type        = string
+  default     = "v2"
+}
+
+
+variable "enable_ecs_service" {
+  description = "Enable CloudCart ECS service deployment"
+  type        = bool
+  default     = true
+}
+

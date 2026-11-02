@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CloudCart | Shop Smarter</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a href="/" class="brand">☁ CloudCart</a>
+    <div class="cart-label">🛒 Cart <span id="cart-count">0</span></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">YOUR TECH, YOUR WAY</span>
+        <h1>Upgrade your everyday.</h1>
+        <p>Discover essential technology for work, play, and everything in between.</p>
+        <a class="hero-button" href="#products">Shop collection ↓</a>
+      </div>
+    </section>
+
+    <section id="products" class="products-section">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">HANDPICKED FOR YOU</span>
+          <h2>Featured products</h2>
+        </div>
+        <span id="product-count"></span>
+      </div>
+
+      <div id="product-grid" class="product-grid">
+        <p>Loading products...</p>
+      </div>
+    </section>
+
+    <section class="cart-section">
+      <h2>Your cart</h2>
+      <div id="cart-items">
+        <p class="muted">Your cart is empty.</p>
+      </div>
+      <div class="cart-total">
+        <strong>Total</strong>
+        <strong id="cart-total">$0.00</strong>
+      </div>
+      <p class="muted">Demo storefront — checkout and payments are not enabled.</p>
+    </section>
+  </main>
+
+  <footer>© CloudCart · Built with Flask, PostgreSQL, Docker & AWS</footer>
+</body>
+</html>
